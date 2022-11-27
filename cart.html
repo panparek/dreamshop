@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="cart.css">
+
+    <script src="cart.js" async></script>
+    
+    <title>Document</title>
+</head>
+<body>
+       <!-- navbar -->
+       <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+        <div class = "container">
+            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "index.html">
+                <!--<img src = "./logo.png" alt = "Logo">-->
+                <span class = "text-uppercase fw-lighter ms-2">Dreamshop</span>
+            </a>
+
+            <div class = "order-lg-2 nav-btns">
+                <button type = "button" class = "btn position-relative">
+                    <a href="cart.html" class="shop-cart"><i class = "fa fa-shopping-cart"></i></a>
+        
+                </button>
+                <button type = "button" class = "btn position-relative">
+                    <i class = "fa fa-search"></i>
+
+                </button>
+                <a href="login.html" class="login-btn position-relative">Sign up</a>
+            </div>
+
+            <button class = "navbar-toggler border-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
+                <span class = "navbar-toggler-icon"></span>
+            </button>
+
+            <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
+                <ul class = "navbar-nav mx-auto text-center">
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "index.html#header">home</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "index.html#collection">collection</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "index.html#special">specials</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "index.html#blogs">blogs</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "index.html#about">about us</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2 border-0">
+                        <a class = "nav-link text-uppercase text-dark" href = "index.html#popular">popular</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-5 pb-5">
+        <div class="container">
+          <div class="row w-100">
+              <div class="col-lg-12 col-md-12 col-12">
+                  <h3 class="display-5 mb-2 text-center">Shopping Cart</h3>
+                  <p class="mb-5 mt-5 text-center">
+                      <i class="text-info font-weight-bold">3</i> items in your cart</p>
+                  <table id="shoppingCart" class="table table-condensed table-responsive">
+                      <thead>
+                          <tr>
+                              <th style="width:60%">Product</th>
+                              <th style="width:12%">Price</th>
+                              <th style="width:10%">Quantity</th>
+                              <th style="width:16%"></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td data-th="Product">
+                                <div class="cart-items">
+                                  <div class="cart-row">
+                                      <div class="col-md-3 text-left">
+                                          <img src="background.jpg" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+                                      </div>
+                                      <div class="col-md-9 text-left mt-sm-2">
+                                          <h4>More nejaka picovina1</h4>
+                                          <p class="font-weight-light">Brand &amp; Name</p>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td data-th="Price" class="cart-price">$12.99</td>
+                              <td data-th="Quantity">
+                                  <input type="number" class="cart-quantity-input form-control form-control-lg text-center" value="1">
+                              </td>
+                              <td class="actions" data-th="">
+                                  <div class="text-right">
+                                      <button class="btn btn-danger border-secondary bg-white btn-md mb-2">
+                                          <i class="fas fa-trash"></i>
+                                      </button>
+                                  </div>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td data-th="Product">
+                                  <div class="cart-row">
+                                      <div class="col-md-3 text-left">
+                                          <img src="background.jpg" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+                                      </div>
+                                      <div class="col-md-9 text-left mt-sm-2">
+                                          <h4>More nejaka picovina2</h4>
+                                          <p class="font-weight-light">Brand &amp; Name</p>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td data-th="Price" class="cart-price">$9.99</td>
+                              <td data-th="Quantity">
+                                  <input type="number" class="cart-quantity-input form-control form-control-lg text-center" value="1">
+                              </td>
+                              <td class="actions" data-th="">
+                                  <div class="text-right">
+                                      <button class="btn btn-danger border-secondary bg-white btn-md mb-2">
+                                          <i class="fas fa-trash"></i>
+                                      </button>
+                                  </div>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td data-th="Product">
+                                  <div class="cart-row">
+                                      <div class="col-md-3 text-left">
+                                          <img src="background.jpg" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+                                      </div>
+                                      <div class="col-md-9 text-left mt-sm-2">
+                                          <h4>More nejaka picovina3</h4>
+                                          <p class="font-weight-light">Brand &amp; Name</p>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td data-th="Price" class="cart-price">$23.99</td>
+                              <td data-th="Quantity">
+                                  <input type="number" class="cart-quantity-input form-control form-control-lg text-center" value="1">
+                              </td>
+                              <td class="actions" data-th="">
+                                  <div class="text-right">
+                                      <button class="btn btn-danger border-secondary bg-white btn-md mb-2">
+                                          <i class="fas fa-trash"></i>
+                                      </button>
+                                    </div>
+                                </div>  
+                            </td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  <div class="float-right text-right">
+                      <h4>Subtotal:</h4>
+                      <span class="cart-total-price">$39.98</span>
+                  </div>
+              </div>
+          </div>
+          <div class="row mt-4 d-flex align-items-center">
+              <div class="col-sm-6 order-md-2 text-right">
+                  <a href="catalog.html" class="btn btn-primary mb-4 btn-lg pl-5 pr-5">Checkout</a>
+              </div>
+              <div class="col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left">
+                  <a href="index.html">
+                      <i class="fas fa-arrow-left mr-2"></i> Continue Shopping</a>
+              </div>
+          </div>
+      </div>
+      </section>
+
+        <!-- snowflakes-->
+        <style>
+        .snowflake {
+          color: #fff;
+          font-size: 1.5em;
+          font-family: Arial, sans-serif;
+          text-shadow: 0 0 10px #000;
+        }
+        
+        @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
+        </style>
+        <div class="snowflakes" aria-hidden="true">
+          <div class="snowflake">
+          ❅
+          </div>
+          <div class="snowflake">
+          ❆
+          </div>
+          <div class="snowflake">
+          ❅
+          </div>
+          <div class="snowflake">
+          ❆
+          </div>
+          <div class="snowflake">
+          ❅
+          </div>
+          <div class="snowflake">
+          ❆
+          </div>
+          <div class="snowflake">
+            ❅
+          </div>
+          <div class="snowflake">
+            ❆
+          </div>
+          <div class="snowflake">
+            ❅
+          </div>
+          <div class="snowflake">
+            ❆
+          </div>
+          <div class="snowflake">
+            ❅
+          </div>
+          <div class="snowflake">
+            ❆
+          </div>
+        </div>
+</body>
+</html>
